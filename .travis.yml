@@ -68,89 +68,89 @@ matrix:
       rust: stable
       env: TARGET=x86_64-unknown-linux-musl
     # Beta channel
-    - os: linux
-      rust: beta
-      env: TARGET=aarch64-unknown-linux-gnu
-      dist: trusty
-      sudo: required
-      addons:
-        apt:
-          packages: *aarch64_unknown_linux_gnu
-    - os: linux
-      rust: beta
-      env: TARGET=armv7-unknown-linux-gnueabihf
-      sudo: required
-      addons:
-        apt:
-          # Use the same packages the stable version uses
-          packages: *armv7_unknown_linux_gnueabihf
-    - os: osx
-      rust: beta
-      env: TARGET=i686-apple-darwin
-    - os: linux
-      rust: beta
-      env: TARGET=i686-unknown-linux-gnu
-      addons:
-        apt:
-          packages: *i686_unknown_linux_gnu
-    - os: linux
-      rust: beta
-      env: TARGET=i686-unknown-linux-musl
-    - os: osx
-      rust: beta
-      env: TARGET=x86_64-apple-darwin
-    - os: linux
-      rust: beta
-      env: TARGET=x86_64-unknown-linux-gnu
-    - os: linux
-      rust: beta
-      env: TARGET=x86_64-unknown-linux-musl
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=aarch64-unknown-linux-gnu
+    #   dist: trusty
+    #   sudo: required
+    #   addons:
+    #     apt:
+    #       packages: *aarch64_unknown_linux_gnu
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=armv7-unknown-linux-gnueabihf
+    #   sudo: required
+    #   addons:
+    #     apt:
+    #       # Use the same packages the stable version uses
+    #       packages: *armv7_unknown_linux_gnueabihf
+    # - os: osx
+    #   rust: beta
+    #   env: TARGET=i686-apple-darwin
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=i686-unknown-linux-gnu
+    #   addons:
+    #     apt:
+    #       packages: *i686_unknown_linux_gnu
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=i686-unknown-linux-musl
+    # - os: osx
+    #   rust: beta
+    #   env: TARGET=x86_64-apple-darwin
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=x86_64-unknown-linux-gnu
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=x86_64-unknown-linux-musl
     # Nightly channel
-    - os: linux
-      rust: nightly
-      env: TARGET=aarch64-unknown-linux-gnu
-      dist: trusty
-      sudo: required
-      addons:
-        apt:
-          packages: *aarch64_unknown_linux_gnu
-    - os: linux
-      rust: nightly
-      env: TARGET=armv7-unknown-linux-gnueabihf
-      sudo: required
-      addons:
-        apt:
-          # Use the same packages the stable version uses
-          packages: *armv7_unknown_linux_gnueabihf
-    - os: osx
-      rust: nightly
-      env: TARGET=i686-apple-darwin
-    - os: linux
-      rust: nightly
-      env: TARGET=i686-unknown-linux-gnu
-      addons:
-        apt:
-          packages: *i686_unknown_linux_gnu
-    - os: linux
-      rust: nightly
-      env: TARGET=i686-unknown-linux-musl
-    - os: osx
-      rust: nightly
-      env: TARGET=x86_64-apple-darwin
-    - os: linux
-      rust: nightly
-      env: TARGET=x86_64-unknown-linux-gnu
-    - os: linux
-      rust: nightly
-      env: TARGET=x86_64-unknown-linux-musl
+    # - os: linux
+    #   rust: nightly
+    #   env: TARGET=aarch64-unknown-linux-gnu
+    #   dist: trusty
+    #   sudo: required
+    #   addons:
+    #     apt:
+    #       packages: *aarch64_unknown_linux_gnu
+    # - os: linux
+    #   rust: nightly
+    #   env: TARGET=armv7-unknown-linux-gnueabihf
+    #   sudo: required
+    #   addons:
+    #     apt:
+    #       # Use the same packages the stable version uses
+    #       packages: *armv7_unknown_linux_gnueabihf
+    # - os: osx
+    #   rust: nightly
+    #   env: TARGET=i686-apple-darwin
+    # - os: linux
+    #   rust: nightly
+    #   env: TARGET=i686-unknown-linux-gnu
+    #   addons:
+    #     apt:
+    #       packages: *i686_unknown_linux_gnu
+    # - os: linux
+    #   rust: nightly
+    #   env: TARGET=i686-unknown-linux-musl
+    # - os: osx
+    #   rust: nightly
+    #   env: TARGET=x86_64-apple-darwin
+    # - os: linux
+    #   rust: nightly
+    #   env: TARGET=x86_64-unknown-linux-gnu
+    # - os: linux
+    #   rust: nightly
+    #   env: TARGET=x86_64-unknown-linux-musl
   allow_failures:
     # Target `i686-unknown-linux-musl` is currently only available on the nightly channel
     - os: linux
       rust: stable
       env: TARGET=i686-unknown-linux-musl
-    - os: linux
-      rust: beta
-      env: TARGET=i686-unknown-linux-musl
+    # - os: linux
+    #   rust: beta
+    #   env: TARGET=i686-unknown-linux-musl
 
 before_install:
   - export PATH="$PATH:$HOME/.cargo/bin"
@@ -167,7 +167,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: PeIFrWpAw+3nul4rc+P8NBap0OcdYi3q5Fq3SXoScsEKezvIGQypMw8dP4GCTIs+1LToGC7DzMHQuxclUKaRkNE1UnFz2Ym2NchLDP561fgWzzSTD+S0fHZTFaCJQaGsqLj+rdtar+u8MxAcC3ADssPG3LNTGlcroMrSpfU3X/HnI/htZIAI0h370NqOUvhSHPIx9VycWNExO7uu5C9pl7qogLQje8GnLwQ2P6z/uMhASvasO1kuY4TDj6xGvo+DQpSQlcUWy2fLo1kkj3xZrCNJ3vFtvT9QioU2cAVhhpokj7Fd6Og08fwtW0DY0070SQfP/Mp/deiO8HmqtVns66Z8YDiW8i8aV1wGGnbWGxw1GNlKuet3HZcbhHvJk//FMRsw9oKRaMXhTRSjyxEMPdwlbFhHsGVsmvLRBQAyojRo+CNKBwo3UDQUOPXkhnh3qgI0kI3e0GtZnXUxD5lgikAHNfZ/XKugnYcyx2RAxVJESZq5xxHT14s+H2+uK9Lkhi9mfNbe0dsbqksp2fuuihImE0rBRrperpG1L2sNlE/9b1qJLYE9Wnj55EE+l+vC8hExP81R/COvlz7nIDr6Hw4g8rWXlT3c+yhgC/TP9OX5iFTQpRuXyapWFVKpwsbSqYyybYyIs9iK2Dvt66xl+RLVyhW1agTAALEhJoY3zaU=
+    secure: "Vi1bYWfoNx793OnDREinQ54lKLxqD11pxexofpKjx2WueoylmFjB6lZazDOm+rrai2Lk1iO85bm0ySHuirnHnOVoG5csrba0ZcWz2+v0D1MpCpTi6mG3/OBQ81JjDp47bTmz89Wmc0h7D7R6H/WwoFJjKJ+Pp3RGkRlYeZp1D6wn0ZwZfshY3GqH9Il47sRBpzUJiH9RQ7VDHjXccAwpV1Mo05JuCHh5dVYy2ocgfUZj1YuoYMRzRbh14TQ5M1V2B8xqyrssbqE++yp+g8z8L0ChndoTV2uzmwmL5bcEIhVn6Gc8/oPMQc1Nc9vfVZThdcwhKHGXkYuX5VuhPWWSjx3/0wxHNzblhVWDBFJrdn4gmPFy+uwiiSOrFXgSphyBr7J3gnMELm4VxQM1qVzSbiRHIQJS8HQjz0GTONRR1VvCNbTY259PH+NI86YIbFk+DLrIuR3OaTR2KWhjiOMbgwPwMj0GjguQwvIIQooNON3cFQeOV90HtWUfsQ7qixHv86bO5tHHJB5IA/O3jztHdJsl56i8j3pdS4IItistNC2Iba+V6jRCvWk0myE67RdIAPA7Wf5HjCmGtGCFhI1RshUR17qyx4tQeAB/62LvHtsC6YRkJmBSS0+pbZ43nGr1F5MCtNmzuLNXqlrOuNqBidJZRA2Fx8s3lOqwayg8tjc="
   file_glob: true
   file: ${PROJECT_NAME}-${TRAVIS_TAG}-${TARGET}.*
   # don't delete the artifacts from previous phases
