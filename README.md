@@ -57,12 +57,12 @@ July 6, 2016 6:33 AM
 
 ## Install
 
-Direct downloads are available through the [releases page](https://github.com/fromnow/fromnow/releases).
+Direct downloads are available through the [releases page](https://github.com/dashed/fromnow/releases).
 
 If you're on OSX, you may install using [Homebrew](http://brew.sh/):
 
 ```
-brew install https://raw.githubusercontent.com/fromnow/fromnow/master/fromnow.rb
+brew install https://raw.githubusercontent.com/dashed/fromnow/master/fromnow.rb
 ```
 
 ## Why?
