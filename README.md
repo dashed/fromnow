@@ -55,6 +55,16 @@ $ fromnow 6 hours
 July 6, 2016 6:33 AM
 ```
 
+## Install
+
+Direct downloads are available through the [releases page](https://github.com/fromnow/fromnow/releases).
+
+If you're on OSX, you may install using [Homebrew](http://brew.sh/):
+
+```
+brew install https://raw.githubusercontent.com/fromnow/fromnow/master/fromnow.rb
+```
+
 ## Why?
 
 I'm aware there exists a `date` command that does essentially the same thing. 
