@@ -6,25 +6,29 @@ fromnow
 ## Usage
 
 ```
-fromnow v0.1.0 (semver.org 2.0)
+fromnow v0.1.1 (semver.org 2.0)
 Alberto Leal <mailforalberto@gmail.com> (github.com/dashed)
 Generate dates and times relative from now.
 
 USAGE:
-    fromnow [OPTIONS] <duration>...
+    fromnow [FLAGS] [OPTIONS] <duration>...
+
+FLAGS:
+    -h, --help        Prints help information
+    -s, --subtract    Subtract time spans/durations to generate date/time in the past.
+                      By default, time
+                      spans/durations are added.
+    -V, --version     Prints version information
 
 OPTIONS:
     -f, --format <format>
         Format specifier for the combined date and time output.
         Example output: July 5, 2016 9:36 PM
-        Default is: %B %-d, %Y %-l:%M %p
+        Default is: %B
+        %-d, %Y %-l:%M %p
         
         See: https://lifthrasiir.github.io/rust-chrono/chrono/format/strftime/index.html
         
-    -h, --help               Prints help information
-    -s, --subtract           Subtract time spans/durations to generate date/time in the past.
-                             By default, time spans/durations are added.
-    -V, --version            Prints version information
 
 ARGS:
     <duration>...
