@@ -41,7 +41,6 @@ fn main() {
         .setting(AppSettings::ColorAuto)
         .setting(AppSettings::ArgRequiredElseHelp)
         .setting(AppSettings::GlobalVersion)
-        .setting(AppSettings::UnifiedHelpMessage)
         .version(version) // semver semantics
         .about("Generate dates and times relative from now.")
         .author("Alberto Leal <mailforalberto@gmail.com> (github.com/dashed)")
